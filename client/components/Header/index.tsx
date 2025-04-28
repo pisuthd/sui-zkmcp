@@ -3,6 +3,7 @@
 import { X, Menu } from "lucide-react"
 import { useState } from "react"
 import Link from "next/link"
+import LoginButton from "./LoginButton"
 
 
 const Header = () => {
@@ -34,12 +35,13 @@ const Header = () => {
 
                     {/* Desktop CTA */}
                     <div className=" flex items-center justify-end md:flex-1 lg:w-0"> 
-                        <a
+                        {/*<a
                             href="#"
                             className="whitespace-nowrap px-5 py-2 border border-transparent rounded-lg shadow-sm text-base font-medium text-white bg-blue-600 hover:bg-blue-700"
                         >
                             Get Started
-                        </a>
+                        </a>*/}
+                        <LoginButton/>
                     </div>
                 </div>
             </div>

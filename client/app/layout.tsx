@@ -3,6 +3,7 @@ import { Sora } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { Providers } from "./providers"
 
 const SoraFont = Sora({
   weight: ["400", "500", "700"],
@@ -23,11 +24,13 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={SoraFont.className}>
-        <div className="min-h-screen  w-full  bg-gradient-to-b from-blue-950 to-blue-900  relative overflow-hidden">
-          <Header />
-          {children}
-          <Footer />
-        </div>
+        <Providers>
+          <div className="min-h-screen  w-full  bg-gradient-to-b from-blue-950 to-blue-900  relative overflow-hidden">
+            <Header />
+            {children}
+            <Footer />
+          </div>
+        </Providers>
       </body>
     </html>
   );
